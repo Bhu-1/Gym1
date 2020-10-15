@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/68d636f388.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden; 
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .bigCols2{
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        .wrapper{
+            padding-left: 7%;
+            padding-top: 100px;
+            width: 100%;
+            height: 890px;
+            background-position: top;
+        }
+        .bg-img{
+            background-image: url(CTA-BG.jpg);
+        }
+        .rgtsec{
+            height: 300px;
+            border: 1px solid blueviolet;
+        }
+        .row1m{
+            width: 100%;
+            color: white;
+            font-size: 26px;
+        }
+        .row2m{
+            width: 100%;
+            line-height: 28px;
+            font-size: 19px;
+            background: transparent;
+            box-sizing: border-box;
+            color: rgba(132,137,145,1);
+            color: #d3d3d3;
+            padding-right: 30px;
+            padding-top: 30px;
+            padding-bottom: 55px;
+        }
+        .fav-icon, .cntcol1{
+            color: rgba(255,255,255,0.85);
+        }
+        .cntcol1{
+            margin-top: -30px;
+            margin-left: 62px;
+        }
+        .inputbx1{
+            width: 100%;
+            height: 56px;
+            border: none;
+            color: rgba(255,255,255,0.7);
+            padding: 10px;
+            border-radius: 3px;
+            background: rgba(0,0,0,0.5);
+            font-size: 16px;
+            outline-color: #1981f0;
+        }
+        .col2m{
+            padding-left:30px;
+        }
+        .form-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .input-nm{
+            padding-left: 30px;
+            margin-bottom: 40px;
+            width: 40%;
+        }
+        .btnxl{
+            width: 100%;
+            height: 50px;
+            text-transform: uppercase;
+            border-radius: 21px;
+            text-decoration: none;
+            border: none;
+            color: white;
+            background: rgba(23,129,241,1);
+            outline: none;
+        }
+        .btnxl:hover{
+            box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.39);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        
+        @media screen and (max-width: 860px) {
+            .form-wrapper{
+                padding-top: 30px;
+            }
+            .bigCols2 {
+                display: grid;
+                grid-template-columns: 100%;
+            }
+            .row2m,.rowm{
+                padding-right: 26%;
+            }
+    
+            .input-nm{
+                width: 80%;
+                padding-left: 0;
+            }
+            .col2m{
+                padding-top: 15px;
+                padding-left: 0px;
+                padding-bottom: 110px;
+            }
+            .wrapper{
+                height: auto;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+        @media screen and (max-width: 520px){
+            .input-nm{
+                width: 100% !important;
+                margin: 0;
+                padding: 0 5% 30px 0;
+
+            }
+        }
+        
+        .wrp-abtus{
+            display: grid;
+            padding-left: 7%;
+            grid-template-columns: 25% 25% 25% 25%;
+            color: #ffffff;
+            background-color: #222222;
+            padding-bottom: 50px;
+        }
+        .col4{
+            padding-top: 60px !important;
+            padding-right: 65px
+        }
+        .col4-heading{
+            font-size: 17px;
+        }
+        .col4-txt{
+            color: rgba(132,137,145,1);
+            line-height: 27px;
+            font-size: 17.5px;
+            margin-top: 45px;
+        }
+        .btn-sm{
+            background-color: rgba(23,129,241,1);
+            color: #ffffff;
+            width: 215px;
+            border: none;
+            height: 45px;
+            font-size: 15px;
+            text-transform: uppercase;
+            border-radius: 4px;
+        }
+        .btn-sm:hover{
+            color:  rgba(23,129,241,1);
+            background-color: #ffffff;
+            transition: all .3s linear;
+        }
+        .wrapper-btn-sm{
+            margin-top: 40px;
+        }
+        
+        @media screen and (max-width: 860px){
+            .wrp-abtus{
+                grid-template-columns: 50% 50%;
+            }
+        }
+
+        @media screen and (max-width: 520px){
+            .wrp-abtus{
+                grid-template-columns: 100%;
+            }
+            .col4{
+                padding-right: 11% !important;
+                padding-top: 50px !important;
+            }
+        }
+        
+        .footer{
+            padding-left: 7%;
+            font-size: 17px;
+            display: grid;
+            grid-template-columns: 75% 25%;
+            color: #858a93;
+            background-color: #1a1a1a;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        .fa-icon{
+            padding-right: 15px;
+        }
+        .fa-icon:hover{
+            color: #ffffff;
+            transition: all .3s linear;
+        }
+        @media screen and (max-width: 860px){
+            .footer{
+                grid-template-columns: 100%;
+            }
+            .footer-icon{
+                padding-top: 40px;
+            }
+        }
+
+        header{
+            width: 100%;
+            height: 75px;
+            background-color: #1e2434;
+        }
+        .wrapper-tr{
+            padding: 150px 30px 0px 30px;
+            text-align: center;
+            height: 500px;
+            background-color: #d23d2d;
+            color: #ffff;
+        }
+        .tr-heading{
+            padding-bottom: 10px;
+            font-size: 17px;
+        }
+        .tr-txt{
+            line-height: 25px;
+            font-size: 19px;
+            padding-bottom: 20px;
+        }
+        .btn-sm-9r{
+            background-color: #d23d2d;
+            border: 1px solid;
+        }
+        .btn-sm-9r:hover{
+            color: #d23d2d;
+            background-color: #ffffff;
+        }
+        .wrapper-tr-img{
+            width: 100%;
+            height: 500px;
+        }
+        .wrapper-tr-img >img{
+            width: inherit;
+            height: inherit;
+        }
+        .row1{
+            width: 100%;
+            text-align: center;
+            font-size: 15px;
+            padding-top: 30px;
+        }
+        .fad-wrapper{
+            display: grid;
+            grid-template-columns: repeat(5,20%);
+            text-align: center;
+            padding: 15px 15px 25px;
+        }
+        @media screen and (max-width: 520px){
+            .fad-wrapper{
+                grid-template-columns: 50% 50% 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: #ffffff;">Logo Here</h1>
+    </header>
+    <div class="bigCols2">
+        <div class="wrapper-tr">
+            <div class="tr-heading">
+                <h1>TRIUMPH</h1>
+            </div>
+            <div class="tr-txt">
+                <p>Join the thousands of 9Round Nation members that are working
+                    towards getting stronger, physically and mentally together.
+                </p>
+            </div>
+            <div>
+                <button class="btn-sm btn-sm-9r"><a href="">find your 9Round</a></button>
+            </div>
+        </div>
+        <div class="wrapper-tr-img">
+            <img src="Hero-Copy.jpg" alt="" srcset="">
+        </div>
+    </div>
+    <div class="row1">
+        <h1>WHY IT WORKS</h1>
+    </div>
+    <div class="fad-wrapper">
+        <div>
+            <i class="fa fa-list-alt" style="font-size: 45px; color: #d23d2d;"></i>
+            <p style="font-weight: 700; margin-top: 15px;">Trainer Included</p>
+        </div>
+        <div>
+            <i class="fa fa-clock-o" style="font-size: 45px; color: #d23d2d;"></i>
+            <p style="font-weight: 700; margin-top: 15px;">No Class Times</p>
+        </div>
+        <div>
+            <i class="fa fa-child" style="font-size: 45px; color: #d23d2d;"></i>
+            <p style="font-weight: 700; margin-top: 15px;">Full-Body</p>
+        </div>
+        <div>
+            <i class="fa fa-history" style="font-size: 45px; color: #d23d2d;"></i>
+            <p style="font-weight: 700; margin-top: 15px;">Workouts Change Daily</p>
+        </div>
+        <div>
+            <i class="fa fa-heartbeat" style="font-size: 45px; color: #d23d2d;"></i>
+            <p style="font-weight: 700; margin-top: 15px;">Heart Rate Technology</p>
+        </div>
+    </div>
+
+
+    <div class="bigCols2 wrapper bg-img">
+        <div class="col1m">
+            <div class="row1m">
+                <h2>Get in Touch</h2>
+            </div>
+            <div class="row2m">
+                <p>
+                    We love to listen and we are eagerly waiting to talk to you regarding your project. Get in touch with us if you have any queries and
+                     we will get back to you as soon as possible.
+                </p>
+            </div>
+            <div class="rowm">
+                <div class="fav-icon">
+                    <i class='far fa-map' style='font-size:35px; color: white;'></i>
+                </div>
+                <div class="cntcol1">
+                    <a href="http://" style="text-decoration: none;
+                    color: rgba(255,255,255,0.85); font-size: 18px;">Visit Us</a>
+                    <p style="padding-top: 12px;
+                    font-size: 20px;
+                    color: rgba(255,255,255,0.7);">Express Chambers II Spaces Works, Level 5, Royapettah, Chennai – 600014</p>
+                </div>
+
+                <div class="fav-icon" style="margin-top: 45px;">
+                    <i class='fa fa-headphones' style='font-size:35px; color: white;'></i>
+                </div>
+                <div class="cntcol1">
+                    <a href="http://" style="text-decoration: none;
+                    color: rgba(255,255,255,0.85); font-size: 18px;">Call Us</a>
+                    <p style="padding-top: 12px;
+                    font-size: 20px;
+                    color: rgba(255,255,255,0.7);">+001-987-654-3210</p>
+                </div>
+
+                <div class="fav-icon" style="margin-top: 45px;">
+                    <i class='fa fa-envelope' style='font-size:35px; color: white;'></i>
+                </div>
+                <div class="cntcol1">
+                    <a href="http://" style="text-decoration: none;
+                    color: rgba(255,255,255,0.85); font-size: 18px;">Email Us</a>
+                    <p style="padding-top: 12px;
+                    font-size: 20px;
+                    color: rgba(255,255,255,0.7);">help@brandexponents.com</p>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="col2m">
+            <form action="">
+                <div class="form-wrapper">
+                    <div class="input-nm">
+                        <input type="text" name="" id="" placeholder="Name" class="inputbx1" required>
+                    </div>
+                    <div class="input-nm">
+                        <input type="text" name="" id="" placeholder="Email" class="inputbx1" required>
+                    </div>
+                    <div class="input-nm" style="width: 80%;">
+                        <input type="text" name="" id="" placeholder="Subject" class="inputbx1">
+                    </div>
+                    <div class="input-nm"  style="width: 80%;">
+                        <textarea name="" id="" cols="30" rows="10" class="inputbx1" style="height: 200px;" placeholder="Message"></textarea>
+                    </div>
+                    <div class="input-nm"  style="width: 80%;">
+                        <button type="submit" class="btnxl">Submit</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="wrp-abtus">
+        <div class="col4">
+            <div class="col4-heading">
+                <h3>Exponent</h3>
+            </div>
+            <div class="col4-txt">
+                <p>Get started swiftly & easily by importing a demo
+                     of your choice in a single click.
+                     Build your website using a fully visual interface.</p>
+            </div>
+        </div>
+        <div class="col4" style="padding-right: 50px;">
+            <div class="col4-heading">
+                <h3>Work Hours</h3>
+            </div>
+            <div class="col4-txt">
+                <p>8 AM - 7 PM , Monday - Saturday
+                    <br>
+                    <br>
+                    Our Support and Sales team is available 24 * 7 to answer your queries
+                </p>
+                <div class="wrapper-btn-sm">
+                    <button class="btn-sm"><a href="http://">call us today</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="col4" style="padding-top: 30px;">
+            <div class="col4-heading">
+                <h3>About Us</h3>
+            </div>
+            <div class="col4-txt">
+                <p>
+                    Management<br>Careers<br>Pricing<br>Resources<br>Press Kit<br>FAQs
+                </p>
+            </div>
+        </div>
+        <div class="col4" style="padding-top: 30px;">
+            <div class="col4-heading">
+                <h3>Legal</h3>
+            </div>
+            <div class="col4-txt">
+                <p>
+                    Privacy <br>Terms and Conditions <br>GDPR <br>Disclaimer <br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <p>Copyright © 2019 Brand Exponents. All Rights Reserved</p>
+        </div>
+        <div class="footer-icon">
+            <a href="http://" class="fa-icon"><i class="fa fa-google-plus"></i></a>
+            <a href="http://" class="fa-icon"><i class="fa fa-instagram"></i></a>
+            <a href="http://" class="fa-icon"><i class="fa fa-linkedin-square"></i></a>
+            <a href="http://" class="fa-icon"><i class="fa fa-skype"></i></a>
+            <a href="http://" class="fa-icon"><i class="fa fa-twitter"></i></a>
+        </div>
+    </div>
+</body>
+</html>
